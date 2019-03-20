@@ -6,7 +6,7 @@ The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been m
 
 To make additional changes to the firmware simple, I have included a portable installation of the Arduino IDE which has been preconfigured to work for Creality CR and Ender printers. To edit the firmware, download this repository and open "OpenFirmwareWindows.bat"
 
-Special thanks to Michal from the YouTube channel [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) and Chris from [TH3D](https://www.th3dstudio.com/) for their excellent guides and other resources.
+Special thanks to Michael from the YouTube channel [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) and Chris from [TH3D](https://www.th3dstudio.com/) for their excellent guides and other resources.
 
 ## The most important things to know are:
 
