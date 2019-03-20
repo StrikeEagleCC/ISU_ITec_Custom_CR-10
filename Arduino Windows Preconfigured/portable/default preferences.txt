@@ -1,0 +1,9 @@
+board=sanguino
+build.verbose=true
+compiler.warning_level=all
+custom_cpu=sanguino_atmega1284p
+editor.code_folding=true
+editor.linenumbers=true
+target_package=Sanguino
+update.check=false
+upload.verbose=true

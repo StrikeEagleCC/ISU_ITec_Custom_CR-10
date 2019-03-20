@@ -1,0 +1,1 @@
+".\Arduino Windows Preconfigured\arduino.exe" .\Firmware\Marlin\Marlin.ino
