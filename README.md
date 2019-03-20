@@ -34,6 +34,7 @@ The modifications on these machines were made for the sake of adding several des
 - No `M503`
 - Printable volume is smaller
 - No arc support
+- No volumetrics
 
 
 ### New Features In Detail
@@ -109,6 +110,9 @@ When `M503` is sent to the printer, the printer responds by listing the current 
 
 #### No Arc Support
 Barely worth mentioning, since most slicers don't output arc commands by default. Disabled to save space.
+
+#### No Volumetrics
+Volumetric extrusion is a feature that allows gcode for a given print to exclude information about the filament diameter and temperatures--these are then selected at print time. If you need it, then you probably know what it is. Disabled to save space.
 
 ### Printer Default Values
 
