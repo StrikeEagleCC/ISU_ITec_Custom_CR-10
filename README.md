@@ -4,6 +4,10 @@ https://github.com/StrikeEagleCC/ISU_ITec_Custom_CR-10
 
 The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been modified in several notable ways that the user should be aware of.
 
+To make additional changes to the firmware simple, I have included a portable installation of the Arduino IDE which has been preconfigured to work for Creality CR and Ender printers. To edit the firmware, download this repository and open "OpenFirmwareWindows.bat"
+
+Special thanks to Michal from the YouTube channel [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) and Chris from [TH3D](https://www.th3dstudio.com/) for their excellent guides and other resources.
+
 ## The most important things to know are:
 
 1. **Add `G29` to your starting scripts!**
