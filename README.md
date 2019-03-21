@@ -127,13 +127,13 @@ These are the default values that will be loaded if you click _Control>Restore f
     Steps per unit:
     M92 X80.00 Y80.00 Z400.00 E93.50
     Maximum feedrates (units/s):
-    M203 X500.00 Y500.00 Z20.00 E40.00
+    M203 X500.00 Y500.00 Z20.00 E100.00
     Maximum Acceleration (units/s2):
-    M201 X1000 Y1000 Z100 E5000
+    M201 X1000 Y1000 Z100 E10000
     Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
-    M204 P500.00 R1000.00 T1000.00
+    M204 P600.00 R1000.00 T1000.00
     Advanced: Q<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_x_jerk> Y<max_y_jerk> Z<max_z_jerk> E<max_e_jerk>
-    M205 Q20000 S0.00 T0.00 X10.00 Y10.00 Z0.40 E13.00
+    M205 Q20000 S0.00 T0.00 X5.00 Y5.00 Z0.40 E25.00
     Home offset:
     M206 X0.00 Y0.00 Z0.00
     Auto Bed Leveling:
