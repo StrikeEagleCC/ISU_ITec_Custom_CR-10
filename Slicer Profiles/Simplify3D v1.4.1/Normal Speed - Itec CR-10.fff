@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="Normal Speed - Itec CR-10" version="2019-03-20 09:07:00" app="S3D-Software 4.1.1">
+<profile name="Normal Speed - Itec CR-10" version="2019-03-22 19:54:27" app="S3D-Software 4.1.1">
   <baseProfile>default</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -143,11 +143,11 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>; Startup script for ITec custom CR-10,M190 S[bed0_temperature] ; Wait for bed to finish preheat,M104 S150 ; Set extruder to a non-ooze temp and do nto wait to preheat,G4 S30 ; Wait additional 30 seconds for bed temp to stabilize,G90 ; Absolute measurement,G28 ; Home all axes,G29 ; Bed leveling,G1 X1 Y1 F6000 ; Move to prime,M109 S[extruder0_temperature] T0; Now wait for extruder to finish preheat,G1 Z0.2 F1000 ; get ready to prime,G92 E0 ; Reset extrusion distance,G1 Y70 E10 F600 ; prime nozzle,G1 Y100 F4000 ; quick wipe,G92 E0 ; Reset extrusion distance</startingGcode>
+  <startingGcode>; S3D startup script for ITec custom CR-10,G90 ; Absolute measurement,G28 ; Home all axes,G29 ; Bed leveling,G1 X1 Y1 F6000 ; Move to prime,G1 Z0.2 F1000 ; get ready to prime,G92 E0 ; Reset extrusion distance,G1 Y70 E10 F600 ; prime nozzle,G1 Y100 F4000 ; quick wipe,G92 E0 ; Reset extrusion distance</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>; Ending script for Itec custom CR-10,G92 E0 ; Reset extrusion distance,G1 E-3.00 F2400 ; Retract,G91 ; incremental measurement,G1 Z0.5 F1000 ; z-lift from print,G90 ; absolute measurement,G28 X0 ; home x axis,M106 S0 ; turn off cooling fan,M104 S0 ; turn off extruder,M140 S0 ; turn off bed,M84 ; disable motors</endingGcode>
+  <endingGcode>; S3D ending script for Itec custom CR-10,G92 E0 ; Reset extrusion distance,G1 E-3.00 F2400 ; Retract,G91 ; incremental measurement,G1 Z0.5 F1000 ; z-lift from print,G90 ; absolute measurement,G28 X0 ; home x axis,M106 S0 ; turn off cooling fan,M104 S0 ; turn off extruder,M140 S0 ; turn off bed,M84 ; disable motors</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Random Song</celebrationSong>
