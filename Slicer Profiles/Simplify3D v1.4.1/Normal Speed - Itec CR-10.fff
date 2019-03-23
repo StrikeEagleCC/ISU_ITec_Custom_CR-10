@@ -143,7 +143,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>; S3D startup script for ITec custom CR-10,G90 ; Absolute measurement,G28 ; Home all axes,G29 ; Bed leveling,G1 X1 Y1 F6000 ; Move to prime,G1 Z0.2 F1000 ; get ready to prime,G92 E0 ; Reset extrusion distance,G1 Y70 E10 F600 ; prime nozzle,G1 Y100 F4000 ; quick wipe,G92 E0 ; Reset extrusion distance</startingGcode>
+  <startingGcode>; Startup script for ITec custom CR-10,M190 S[bed0_temperature] ; Wait for bed to finish preheat,M104 S150 ; Set extruder to a non-ooze temp and do nto wait to preheat,G4 S30 ; Wait additional 30 seconds for bed temp to stabilize,G90 ; Absolute measurement,G28 ; Home all axes,G29 ; Bed leveling,G1 X1 Y1 F6000 ; Move to prime,M109 S[extruder0_temperature] T0; Now wait for extruder to finish preheat,G1 Z0.2 F1000 ; get ready to prime,G92 E0 ; Reset extrusion distance,G1 Y70 E10 F600 ; prime nozzle,G1 Y100 F4000 ; quick wipe,G92 E0 ; Reset extrusion distance</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -201,7 +201,7 @@
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="205"/>
-      <setpoint layer="1" temperature="200"/>
+      <setpoint layer="2" temperature="200"/>
     </temperatureController>
     <globalBedTemperature>60</globalBedTemperature>
     <globalExtrusionMultiplier>0.95</globalExtrusionMultiplier>
