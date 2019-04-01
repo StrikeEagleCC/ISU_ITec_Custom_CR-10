@@ -15,11 +15,11 @@ The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been m
 
 1. **Add `G29` to your starting scripts!**
 1. **Do not use metal scrapers on the ULTRABASE print surface! Allow it to cool completely and parts will pop off easily.** If parts are not coming off easily, the first layer may be getting too squashed.
-1. **The bed size has been shrunk to 300mm x 255mm (X, Y)**
+1. **The bed size has been shrunk to 300mm x 255mm (X, Y) in firmware. Commanded movements outside this space will be ignored by the printer.**
 1. **The bed leveling knobs do not need to be adjusted (though they should be lightly snug)**
 1. **The height of the nozzle above the bed can be adjusted from the menus:**
     1. _Control>Motion>Z Probe Offset_
-    1. **Or** by double clicking the control knob during a print
+    1. **Or** by double clicking the control knob during a print (making live adjustments this way is called "baby-stepping")
 1. **Each printer controller is paired with a particular printer frame (or specifically, with each hot end assembly) due to the**  **Z Probe Offset**  **setting. Don't mix them up.**
 
 The modifications on these machines were made for the sake of adding several desirable features for both safety and functionality. However, given the low price point of the printers, some trade-offs had to be made to accommodate the new features. The new features and the features lost in exchange are listed below, and then discussed in further detail. The changes involved the installation of some new hardware, the modification of the original hardware, and the installation of a customized version of the Marlin firmware
