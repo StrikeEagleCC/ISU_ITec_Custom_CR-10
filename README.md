@@ -186,7 +186,7 @@ Pin | Function
 5|+5V
 6|Ground
 
-Pins 2 connects to the same port on the board as the Z-axis endstop switch used to. The BLTouch uses it to signal when the probe pin has been depressed. Pin 4 is connected to pin 27 on the motherboard, and is used to tell the BLTouch to deploy or retract the probing pin.
+Pin 2 connects to the same port on the board as the Z-axis endstop switch used to. The BLTouch uses it to signal when the probe pin has been depressed. Pin 4 is connected to pin 27 on the motherboard, and is used to tell the BLTouch to deploy or retract the probing pin.
 
 #### Filament Runout Plug
 ![](https://drive.google.com/uc?export=view&id=1BZnMTavnZmJFPT1uhG6D9j0MvsMsLLij "Filament Runout Pins")
@@ -198,6 +198,7 @@ Pin | Function
 3|Signal
 
 Pin 3 is connected to pin 29 on the motherboard. It is used to sense the presence of filament. The firmware interprets the state of the signal pin as follows:
+
 Pin State|Runout State
 ---|---
 High (floating, has internal pullup)|Filament present
