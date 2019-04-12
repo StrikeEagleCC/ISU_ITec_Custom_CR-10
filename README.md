@@ -4,7 +4,7 @@ https://github.com/StrikeEagleCC/ISU_ITec_Custom_CR-10
 
 To make additional changes to the firmware simple, I have included in this repository a portable installation of the Arduino IDE which has been preconfigured to work for Creality CR and Ender series printers. To edit the firmware, download this repository and open "OpenFirmwareWindows.bat"
 
-Special thanks to Michael from the YouTube channel [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) and Chris from [TH3D](https://www.th3dstudio.com/) for their excellent guides and other resources.
+Special thanks to Michael from the YouTube channel [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) and Chris from [TH3D](https://www.th3dstudio.com/) for their excellent guides and other resources. And of course, to the Marlin developer community for all of their excellent work.
 
 ---
 
@@ -15,11 +15,11 @@ The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been m
 
 1. **Add `G29` to your starting scripts!**
 1. **Do not use metal scrapers on the ULTRABASE print surface! Allow it to cool completely and parts will pop off easily.** If parts are not coming off easily, the first layer may be getting too squashed.
-1. **The bed size has been shrunk to 300mm x 255mm (X, Y)**
+1. **The bed size has been shrunk to 300mm x 255mm (X, Y) in firmware. Commanded movements outside this space will be ignored by the printer.**
 1. **The bed leveling knobs do not need to be adjusted (though they should be lightly snug)**
 1. **The height of the nozzle above the bed can be adjusted from the menus:**
     1. _Control>Motion>Z Probe Offset_
-    1. **Or** by double clicking the control knob during a print
+    1. **Or** by double clicking the control knob during a print (making live adjustments this way is called "baby-stepping")
 1. **Each printer controller is paired with a particular printer frame (or specifically, with each hot end assembly) due to the**  **Z Probe Offset**  **setting. Don't mix them up.**
 
 The modifications on these machines were made for the sake of adding several desirable features for both safety and functionality. However, given the low price point of the printers, some trade-offs had to be made to accommodate the new features. The new features and the features lost in exchange are listed below, and then discussed in further detail. The changes involved the installation of some new hardware, the modification of the original hardware, and the installation of a customized version of the Marlin firmware
@@ -186,7 +186,7 @@ Pin | Function
 5|+5V
 6|Ground
 
-Pins 2 connects to the same port on the board as the Z-axis endstop switch used to. The BLTouch uses it to signal when the probe pin has been depressed. Pin 4 is connected to pin 27 on the motherboard, and is used to tell the BLTouch to deploy or retract the probing pin.
+Pin 2 connects to the same port on the board as the Z-axis endstop switch used to. The BLTouch uses it to signal when the probe pin has been depressed. Pin 4 is connected to pin 27 on the motherboard, and is used to tell the BLTouch to deploy or retract the probing pin.
 
 #### Filament Runout Plug
 ![](https://drive.google.com/uc?export=view&id=1BZnMTavnZmJFPT1uhG6D9j0MvsMsLLij "Filament Runout Pins")
@@ -198,6 +198,7 @@ Pin | Function
 3|Signal
 
 Pin 3 is connected to pin 29 on the motherboard. It is used to sense the presence of filament. The firmware interprets the state of the signal pin as follows:
+
 Pin State|Runout State
 ---|---
 High (floating, has internal pullup)|Filament present
