@@ -2,6 +2,12 @@
 Firmware, information, and slicer profiles for the ISU ITec club custom Creality CR-10's
 https://github.com/StrikeEagleCC/ISU_ITec_Custom_CR-10
 
+## 2020 UPDATE
+- moved to flexible, removable magnetic print surface
+- Restored full build volume through better implementation of homing and mesh probing
+- Reverted back to bed springs instead of nylon spacers to reduce severity of crashes, and used better-than-stock springs
+- [New and Improved slicer profiles!](https://github.com/StrikeEagleCC/ISU_ITec_Custom_CR-10/tree/master/Slicer%20Profiles)
+
 To make additional changes to the firmware simple, I have included in this repository a portable installation of the Arduino IDE which has been preconfigured to work for Creality CR and Ender series printers. To edit the firmware, download this repository and open "OpenFirmwareWindows.bat"
 
 Special thanks to Michael from the YouTube channel [Teaching Tech](https://www.youtube.com/channel/UCbgBDBrwsikmtoLqtpc59Bw) and Chris from [TH3D](https://www.th3dstudio.com/) for their excellent guides and other resources. And of course, to the Marlin developer community for all of their excellent work.
@@ -18,9 +24,9 @@ The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been m
 1. **When placing the manetic print surface on the bed, ensure there is no debris between the print surface and the bed. This is especially important if the printers continue to be stored in the CNC lab, as metal chips will be attracted to the magnetic surfaces.**
 1. **Do not use metal scrapers on the ULTRABASE glass print surface! Allow it to cool completely and parts will pop off easily.** If parts are not coming off easily, the first layer may be getting too squashed.
 1. **If using the glas print surface, don't attempt to print close to the front or back edge. The print head will hit the clips that hold the glass to the bed.**
-1. **The shape of the bed will continue to change for several minutes after preheating has completed. Allow several minutes at full temperature before starting the bed-leveling probing.** This can be done by adding delays to starting scripts.
+1. **The shape of the bed will continue to change for several minutes after preheating has completed. Allow several minutes at full temperature before starting the bed-leveling probing.** This can be done by adding delays to starting scripts. Read more below.
 1. **The bed leveling knobs do not need to be adjusted. They have been carefully set and locked with jam nuts. Any remaining out-of-level condition should be compensated for by the BLTouch probe and software bed leveling**
-1. **The height of the nozzle above the bed can be adjusted from the menus:**
+1. **The height of the nozzle above the bed can be adjusted from the menus to dial in the height of the first layer in real time:**
     1. _Control>Motion>Probe Z Offset_
     1. **Or** by double clicking the control knob during a print (making live adjustments this way is called "baby-stepping")
 1. **Each printer controller is paired with a particular printer frame due to the** **_Probe Z Offset_**  **setting being unique to each printer. Don't mix them up.**
@@ -226,6 +232,6 @@ Enclosure Fan|Delta Electronics|EFB0412MD|[digikey.com](https://www.digikey.com/
  
  If the hotend fan needs replacement, don't try to get a super high flow upgrade. Too much cooling can be a problem.  Regardless of which fan is used to replace it, printing temperatures may need adjustment.
  
- The part specified for the cooling fan *should* have more flow and higher pressure than the stock fan. Fan speeds and/or print temperatures may require adjustment after replacement. Generally, PLA does well with lots of cooling though.
+ The part specified for the cooling fan *should* have more flow and higher pressure than the stock fan. Fan speeds and/or print temperatures may require adjustment after replacement. Generally, PLA does well with lots of cooling though. Get the most powerful fan that will fit.
  
  The power supplies supplied with these printers are garbage. While they do function, they make clicking and squealing noises, and the fans can vibrate like crazy. I found loose balls of solder in one of them. I've opened both and don't think they pose a serious safety risk now that the loose solder has been removed. However, I don't have faith in their longevity. Edit: One has failed already and has been replaced.
