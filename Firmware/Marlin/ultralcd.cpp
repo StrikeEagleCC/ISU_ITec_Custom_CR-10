@@ -2731,18 +2731,18 @@ void lcd_quick_feedback(const bool clear_buttons) {
     //
     // Change filament
     //
-    #if ENABLED(ADVANCED_PAUSE_FEATURE)
-      if (!IS_SD_FILE_OPEN) {
-        #if E_STEPPERS == 1 && !ENABLED(FILAMENT_LOAD_UNLOAD_GCODES)
-          if (thermalManager.targetHotEnoughToExtrude(active_extruder))
-            MENU_ITEM(gcode, MSG_FILAMENTCHANGE, PSTR("M600 B0"));
-          else
-            MENU_ITEM(submenu, MSG_FILAMENTCHANGE, lcd_temp_menu_e0_filament_change);
-        #else
-          MENU_ITEM(submenu, MSG_FILAMENTCHANGE, lcd_change_filament_menu);
-        #endif
-      }
-    #endif // ADVANCED_PAUSE_FEATURE
+//    #if ENABLED(ADVANCED_PAUSE_FEATURE)
+//      if (!IS_SD_FILE_OPEN) {
+//        #if E_STEPPERS == 1 && !ENABLED(FILAMENT_LOAD_UNLOAD_GCODES)
+//          if (thermalManager.targetHotEnoughToExtrude(active_extruder))
+//            MENU_ITEM(gcode, MSG_FILAMENTCHANGE, PSTR("M600 B0"));
+//          else
+//            MENU_ITEM(submenu, MSG_FILAMENTCHANGE, lcd_temp_menu_e0_filament_change);
+//        #else
+//          MENU_ITEM(submenu, MSG_FILAMENTCHANGE, lcd_change_filament_menu);
+//        #endif
+//      }
+//    #endif // ADVANCED_PAUSE_FEATURE
 
     #if HAS_TEMP_HOTEND
 
@@ -2759,13 +2759,13 @@ void lcd_quick_feedback(const bool clear_buttons) {
       //
       // Preheat for Material 1 and 2
       //
-      #if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 || TEMP_SENSOR_3 != 0 || TEMP_SENSOR_4 != 0 || HAS_HEATED_BED
-        MENU_ITEM(submenu, MSG_PREHEAT_1, lcd_preheat_m1_menu);
-        MENU_ITEM(submenu, MSG_PREHEAT_2, lcd_preheat_m2_menu);
-      #else
-        MENU_ITEM(function, MSG_PREHEAT_1, lcd_preheat_m1_e0_only);
-        MENU_ITEM(function, MSG_PREHEAT_2, lcd_preheat_m2_e0_only);
-      #endif
+//      #if TEMP_SENSOR_1 != 0 || TEMP_SENSOR_2 != 0 || TEMP_SENSOR_3 != 0 || TEMP_SENSOR_4 != 0 || HAS_HEATED_BED
+//        MENU_ITEM(submenu, MSG_PREHEAT_1, lcd_preheat_m1_menu);
+//        MENU_ITEM(submenu, MSG_PREHEAT_2, lcd_preheat_m2_menu);
+//      #else
+//        MENU_ITEM(function, MSG_PREHEAT_1, lcd_preheat_m1_e0_only);
+//        MENU_ITEM(function, MSG_PREHEAT_2, lcd_preheat_m2_e0_only);
+//      #endif
 
     #endif // HAS_TEMP_HOTEND
 
@@ -3533,48 +3533,48 @@ void lcd_quick_feedback(const bool clear_buttons) {
     // PID-P E4, PID-I E4, PID-D E4, PID-C E4, PID Autotune E4
     // PID-P E5, PID-I E5, PID-D E5, PID-C E5, PID Autotune E5
     //
-    #if ENABLED(PIDTEMP)
-
-      #define _PID_BASE_MENU_ITEMS(ELABEL, eindex) \
-        raw_Ki = unscalePID_i(PID_PARAM(Ki, eindex)); \
-        raw_Kd = unscalePID_d(PID_PARAM(Kd, eindex)); \
-        MENU_ITEM_EDIT(float52sign, MSG_PID_P ELABEL, &PID_PARAM(Kp, eindex), 1, 9990); \
-        MENU_ITEM_EDIT_CALLBACK(float52sign, MSG_PID_I ELABEL, &raw_Ki, 0.01f, 9990, copy_and_scalePID_i_E ## eindex); \
-        MENU_ITEM_EDIT_CALLBACK(float52sign, MSG_PID_D ELABEL, &raw_Kd, 1, 9990, copy_and_scalePID_d_E ## eindex)
-
-      #if ENABLED(PID_EXTRUSION_SCALING)
-        #define _PID_MENU_ITEMS(ELABEL, eindex) \
-          _PID_BASE_MENU_ITEMS(ELABEL, eindex); \
-          MENU_ITEM_EDIT(float3, MSG_PID_C ELABEL, &PID_PARAM(Kc, eindex), 1, 9990)
-      #else
-        #define _PID_MENU_ITEMS(ELABEL, eindex) _PID_BASE_MENU_ITEMS(ELABEL, eindex)
-      #endif
-
-      #if ENABLED(PID_AUTOTUNE_MENU)
-        #define PID_MENU_ITEMS(ELABEL, eindex) \
-          _PID_MENU_ITEMS(ELABEL, eindex); \
-          MENU_MULTIPLIER_ITEM_EDIT_CALLBACK(int3, MSG_PID_AUTOTUNE ELABEL, &autotune_temp[eindex], 150, heater_maxtemp[eindex] - 15, lcd_autotune_callback_E ## eindex)
-      #else
-        #define PID_MENU_ITEMS(ELABEL, eindex) _PID_MENU_ITEMS(ELABEL, eindex)
-      #endif
-
-      #if ENABLED(PID_PARAMS_PER_HOTEND) && HOTENDS > 1
-        PID_MENU_ITEMS(" " MSG_E1, 0);
-        PID_MENU_ITEMS(" " MSG_E2, 1);
-        #if HOTENDS > 2
-          PID_MENU_ITEMS(" " MSG_E3, 2);
-          #if HOTENDS > 3
-            PID_MENU_ITEMS(" " MSG_E4, 3);
-            #if HOTENDS > 4
-              PID_MENU_ITEMS(" " MSG_E5, 4);
-            #endif // HOTENDS > 4
-          #endif // HOTENDS > 3
-        #endif // HOTENDS > 2
-      #else // !PID_PARAMS_PER_HOTEND || HOTENDS == 1
-        PID_MENU_ITEMS("", 0);
-      #endif // !PID_PARAMS_PER_HOTEND || HOTENDS == 1
-
-    #endif // PIDTEMP
+//    #if ENABLED(PIDTEMP)
+//
+//      #define _PID_BASE_MENU_ITEMS(ELABEL, eindex) \
+//        raw_Ki = unscalePID_i(PID_PARAM(Ki, eindex)); \
+//        raw_Kd = unscalePID_d(PID_PARAM(Kd, eindex)); \
+//        MENU_ITEM_EDIT(float52sign, MSG_PID_P ELABEL, &PID_PARAM(Kp, eindex), 1, 9990); \
+//        MENU_ITEM_EDIT_CALLBACK(float52sign, MSG_PID_I ELABEL, &raw_Ki, 0.01f, 9990, copy_and_scalePID_i_E ## eindex); \
+//        MENU_ITEM_EDIT_CALLBACK(float52sign, MSG_PID_D ELABEL, &raw_Kd, 1, 9990, copy_and_scalePID_d_E ## eindex)
+//
+//      #if ENABLED(PID_EXTRUSION_SCALING)
+//        #define _PID_MENU_ITEMS(ELABEL, eindex) \
+//          _PID_BASE_MENU_ITEMS(ELABEL, eindex); \
+//          MENU_ITEM_EDIT(float3, MSG_PID_C ELABEL, &PID_PARAM(Kc, eindex), 1, 9990)
+//      #else
+//        #define _PID_MENU_ITEMS(ELABEL, eindex) _PID_BASE_MENU_ITEMS(ELABEL, eindex)
+//      #endif
+//
+//      #if ENABLED(PID_AUTOTUNE_MENU)
+//        #define PID_MENU_ITEMS(ELABEL, eindex) \
+//          _PID_MENU_ITEMS(ELABEL, eindex); \
+//          MENU_MULTIPLIER_ITEM_EDIT_CALLBACK(int3, MSG_PID_AUTOTUNE ELABEL, &autotune_temp[eindex], 150, heater_maxtemp[eindex] - 15, lcd_autotune_callback_E ## eindex)
+//      #else
+//        #define PID_MENU_ITEMS(ELABEL, eindex) _PID_MENU_ITEMS(ELABEL, eindex)
+//      #endif
+//
+//      #if ENABLED(PID_PARAMS_PER_HOTEND) && HOTENDS > 1
+//        PID_MENU_ITEMS(" " MSG_E1, 0);
+//        PID_MENU_ITEMS(" " MSG_E2, 1);
+//        #if HOTENDS > 2
+//          PID_MENU_ITEMS(" " MSG_E3, 2);
+//          #if HOTENDS > 3
+//            PID_MENU_ITEMS(" " MSG_E4, 3);
+//            #if HOTENDS > 4
+//              PID_MENU_ITEMS(" " MSG_E5, 4);
+//            #endif // HOTENDS > 4
+//          #endif // HOTENDS > 3
+//        #endif // HOTENDS > 2
+//      #else // !PID_PARAMS_PER_HOTEND || HOTENDS == 1
+//        PID_MENU_ITEMS("", 0);
+//      #endif // !PID_PARAMS_PER_HOTEND || HOTENDS == 1
+//
+//    #endif // PIDTEMP
 
     #if DISABLED(SLIM_LCD_MENUS)
       //

@@ -14,7 +14,8 @@ The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been m
 ## The most important things to know are:
 
 1. **Add `G29` to your starting scripts!**
-1. **Do not use metal scrapers on the ULTRABASE print surface! Allow it to cool completely and parts will pop off easily.** If parts are not coming off easily, the first layer may be getting too squashed.
+1. **The flexible magnetic print surfaces work well for PLA and PETG. However, the ULTRABASE glass surface can still be used if desired. Simply remove the magnetic sheet and replace with the glass.**
+1. **Do not use metal scrapers on the ULTRABASE glass print surface! Allow it to cool completely and parts will pop off easily.** If parts are not coming off easily, the first layer may be getting too squashed.
 1. **The bed size has been shrunk to 300mm x 255mm (X, Y) in firmware. Commanded movements outside this space will be ignored by the printer.**
 1. **The bed leveling knobs do not need to be adjusted (though they should be lightly snug)**
 1. **The height of the nozzle above the bed can be adjusted from the menus:**
@@ -228,6 +229,9 @@ Enclosure Fan|Delta Electronics|EFB0412MD|[digikey.com](https://www.digikey.com/
 **Notes:**
  
  *The board fans have already been replaced in both printers
+ *The part cooling fans have already been replaced in both printers
+ *The hotend fans have already been replaced on both printers
+ *The power supply has already been replaced in one printer
  
  If the hotend fan needs replacement, don't try to get a super high flow upgrade. Too much cooling can be a problem.  Regardless of which fan is used to replace it, printing temperatures may need adjustment.
  
