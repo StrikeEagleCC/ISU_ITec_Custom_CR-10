@@ -7,6 +7,9 @@ https://github.com/StrikeEagleCC/ISU_ITec_Custom_CR-10
 - Restored full build volume through better implementation of homing and mesh probing
 - Reverted back to bed springs instead of nylon spacers to reduce severity of crashes, and used better-than-stock springs
 - [New and Improved slicer profiles!](https://github.com/StrikeEagleCC/ISU_ITec_Custom_CR-10/tree/master/Slicer%20Profiles)
+- Removed Slic3r profiles from this repository
+- Added PrusaSlicer profiles to this repository
+- **All slicer profile updates are still in work at this time**
 
 To make additional changes to the firmware simple, I have included in this repository a portable installation of the Arduino IDE which has been preconfigured to work for Creality CR and Ender series printers. To edit the firmware, download this repository and open "OpenFirmwareWindows.bat"
 
