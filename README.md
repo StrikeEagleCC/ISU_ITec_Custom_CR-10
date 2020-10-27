@@ -20,7 +20,7 @@ The two Creality CR-10s belonging to the ISU Itec Club Robotics Team have been m
 
 ## The most important things to know are:
 
-1. **Add `G29` to your starting scripts!**
+1. **Add `G29` to your starting scripts!** (But only after commands to fully heat the bed, i.e. M190)
 1. **The flexible magnetic print surfaces work well for PLA and PETG. However, you can still use the ULTRABASE glass surface. Simply remove the magnetic sheet and replace with the glass.**
 1. **When placing the manetic print surface on the bed, ensure there is no debris between the print surface and the bed. This is especially important if the printers continue to be stored in the CNC lab, as metal chips will be attracted to the magnetic surfaces.**
 1. **Do not use metal scrapers on the ULTRABASE glass print surface! Allow it to cool completely and parts will pop off easily.** If parts are not coming off easily, the first layer may be getting too squashed.
