@@ -209,6 +209,8 @@ Part|Detail|Source
 ---|---|---
 Flexible Magnetic Print Surface|Creality|[amazon.com](https://www.amazon.com/gp/product/B07GZ7QQTS/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 Black Glass Bed|Anycubic Ultrabase|[Anycubic3D.com](https://www.anycubic.com/collections/heated-bed-glass-plate/products/platform-tempered-glass-plate-310mmx310mm-for-large-print-size)
+Bowden tube|Capricorn XS|[captubes.com](https://www.captubes.com/shop/#!/2-Meters-XS-Low-Friction-1-75mm-Bowden-Tubing/p/82434216/category=23214267)
+Tube fittings|Capricorn|See above
 Bed Springs|FYSETC|[amazon.com](https://www.amazon.com/gp/product/B07GXC1G2B/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 Silicone Sock|Creality|[amazon.com](https://www.amazon.com/gp/product/B07HP2SWJX/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 Filament Runout Sensor|Custom Design
