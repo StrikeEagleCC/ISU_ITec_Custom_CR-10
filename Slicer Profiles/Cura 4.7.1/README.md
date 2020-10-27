@@ -3,6 +3,7 @@
 Cura doesn't appear to support exporting printer configurations. To make a printer profile for Cura, you will need the following information to add a custom FFF printer:
 
 Setting Name|Value
+---|---
 X(Width)|300
 Y(Depth)|300
 Z(Height)|400
