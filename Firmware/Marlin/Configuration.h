@@ -435,7 +435,7 @@
   
   // Creality CR-10 stock bed tuned for 60 degrees
   #define DEFAULT_bedKp 916
-  #define DEFAULT_bedKi 117
+  #define DEFAULT_bedKi 177
   #define DEFAULT_bedKd 1181
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
